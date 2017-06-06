@@ -45,33 +45,32 @@ are satisfied and the 'ui_mainwindow.py' script accompanies
 Usage
 =====
 
-Create Your First Slot
-----------------------
+Create Your First One Time Password Configuration Slot
+------------------------------------------------------
 
 On the first run of Two Factor Keeper, you'll be met with a mostly blank
 interface:
 
-TODO: first-run-ui
+![First run UI](https://github.com/OmegaPhil/two-factor-keeper/blob/master/docs/first-run-ui.png?raw=true)
 
 2FA configuration/credentials are collected into 'slots', and the left empty
 list indicates there are no slots configured yet.
 
 On the right, type a name that you will remember to identify the credentials
-(e.g. site name), then enter the key/secret that the service/site has given you.
-Usually this is a base32 encoded string (just a long string of capital letters
-and numbers potentially with one or more '=' at the end) - this option is on
-by default.
+(e.g. site name), then enter the key/secret that the service/site has given you
+(make sure there are no empty lines or spaces at the end). Usually this is a
+base32 encoded string (just a long string of capital letters and numbers
+potentially with one or more '=' at the end) - this option is on by default.
 
-Type/paste the secret (make sure there are no empty lines or spaces at the end),
-then encrypt it - press the top-right lock button (currently in the unlocked
+Encrypt the secret via the top-right lock button (currently in the unlocked
 state), and enter your passphrase:
 
-TODO: encrypt-otp-secret
+![Encrypt OTP secret](https://github.com/OmegaPhil/two-factor-keeper/blob/master/docs/encrypt-otp-secret.png?raw=true)
 
 Once a valid passphrase has been accepted, the key/secret widget locks, and the
 encryption button has now changed to a locked decryption button:
 
-TODO: otp-secret-encrypted
+![OTP secret encrypted](https://github.com/OmegaPhil/two-factor-keeper/blob/master/docs/otp-secret-encrypted.png?raw=true)
 
 Under 'Mode and basic options', choose TOTP (Time-based One Time Password)
 rather than HOTP (Hash-based One Time Password) if the site you're configuring
@@ -81,6 +80,8 @@ with the defaults (SHA1 TOTP algorithm etc).
 For sites that support it, you can configure more secure OTP generation with
 more advanced hashes resulting in a number up to 8 digits long (the current
 oathtool limit).
+
+Further detail on the advanced options is available in the [oathtool manpage](http://www.nongnu.org/oath-toolkit/oathtool.1.html).
 
 
 Generating A One Time Password
@@ -92,11 +93,11 @@ either the Apply or Add buttons at the bottom.
 To generate the OTP, press the 'Generate OTP' button on the bottom left -
 you'll be prompted for the passphrase:
 
-TODO: generate-otp-secret-passphrase-prompt
+![Generate OTP secret passphrase prompt](https://github.com/OmegaPhil/two-factor-keeper/blob/master/docs/generate-otp-secret-passphrase-prompt.png?raw=true)
 
 Get it right, and your OTP code is ready:
 
-TODO: otp-generated
+![OTP generated](https://github.com/OmegaPhil/two-factor-keeper/blob/master/docs/otp-generated.png?raw=true)
 
 This code is usually valid for 30 seconds after the site first asks for it, and
 for your convenience it has also been copied to the clipboard.
@@ -109,7 +110,7 @@ To change the key/secret, press the locked button and enter the passphrase - if
 you no longer remember the passphrase, and don't mind losing the secret, press
 the brush button to the right of the lock to erase:
 
-TODO: erase-otp-secret
+![Erase OTP secret](https://github.com/OmegaPhil/two-factor-keeper/blob/master/docs/erase-otp-secret.png?raw=true)
 
 If you make a change to a slot, haven't saved yet and want to undo it, use the
 Reset button at the bottom to load the previously-saved configuration.
@@ -121,7 +122,7 @@ right.
 Bugs And Feature Requests
 =========================
 
-Please create an issue on the Github issue tracker.
+Please create an issue on the [Github issue tracker](https://github.com/OmegaPhil/two-factor-keeper/issues).
 
 
 Contact Details
