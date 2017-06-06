@@ -122,6 +122,13 @@ To remove a slot, select it in the list then use the Remove button on the bottom
 right.
 
 
+Adding More Slots
+-----------------
+
+Edit the current loaded slot and change the name, then instead of Applying any
+changes, use the Add button.
+
+
 Configuration Storage
 =====================
 
