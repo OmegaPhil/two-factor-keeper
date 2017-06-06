@@ -51,7 +51,7 @@ Create Your First One Time Password Configuration Slot
 On the first run of Two Factor Keeper, you'll be met with a mostly blank
 interface:
 
-![First run UI](https://github.com/OmegaPhil/two-factor-keeper/blob/master/docs/first-run-ui.png?raw=true)
+![First run UI](docs/first-run-ui.png)
 
 2FA configuration/credentials are collected into 'slots', and the left empty
 list indicates there are no slots configured yet.
