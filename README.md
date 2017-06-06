@@ -51,7 +51,7 @@ Create Your First One Time Password Configuration Slot
 On the first run of Two Factor Keeper, you'll be met with a mostly blank
 interface:
 
-![First run UI](docs/first-run-ui.png)
+![First run UI](https://github.com/OmegaPhil/two-factor-keeper/blob/master/docs/first-run-ui.png?raw=true)
 
 2FA configuration/credentials are collected into 'slots', and the left empty
 list indicates there are no slots configured yet.
@@ -106,6 +106,9 @@ for your convenience it has also been copied to the clipboard.
 Further Configuration
 ---------------------
 
+*Slot changes are not saved automatically - make your change then press the Apply
+button at the bottom to save.*
+
 To change the key/secret, press the locked button and enter the passphrase - if
 you no longer remember the passphrase, and don't mind losing the secret, press
 the brush button to the right of the lock to erase:
@@ -117,6 +120,13 @@ Reset button at the bottom to load the previously-saved configuration.
 
 To remove a slot, select it in the list then use the Remove button on the bottom
 right.
+
+
+Configuration Storage
+=====================
+
+Slot configuration is maintained in the '~/.config/two-factor-keeper/slots.conf'
+YAML file.
 
 
 Bugs And Feature Requests
