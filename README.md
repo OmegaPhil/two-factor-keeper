@@ -28,6 +28,7 @@ Coded with/dependent on (may work with earlier versions):
 Python 3.5  
 PyQt5 5.7  
 python3-cryptography 1.7.1  
+python3-sh 1.11  
 python3-yaml 3.12  
 oathtool 2.6.1
 
