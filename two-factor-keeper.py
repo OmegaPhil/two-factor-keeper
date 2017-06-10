@@ -507,11 +507,11 @@ def otp_slot_add():
 
     try:
 
-        # Saving new slot, ignoring exceptions (dialogs are raised regardless)
+        # Saving new slot, exiting on exceptions (dialogs are raised regardless)
         save_slot(True)
 
     except TwoFactorKeeperException:
-        pass
+        return
 
     # Ensuring the newly-added slot is selected (save_slot no longer does
     # this to prevent recursion) - making sure spurious 'changes' are not
@@ -684,8 +684,9 @@ def save_slot(is_slot_new, old_slot_name=None):
     if slot_name == '':
         raise SaveNameNotUniqueException
 
-    # Making sure OTP key is encrypted before saving
-    if not get_key_contents().endswith('='):
+    # Making sure OTP key is encrypted before saving - note that '=' at the end
+    # are effectively noop characters used for padding, and may not be present
+    if ui.key_plaintextedit.isEnabled():
         QMessageBox.warning(main_win, SCRIPT_NAME, 'Please set and encrypt the '
                     'key/secret via the lock button before saving the '
                     'OTP slot.')
